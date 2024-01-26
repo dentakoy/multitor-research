@@ -74,6 +74,8 @@ function CreateTorProcess() {
 
   # shellcheck disable=SC2024
   sudo -u "$_arg_uname" tor -f "${_torrc_config}" \
+       --ExitNodes "{ru},{by},{kz},{md}" \
+       --StrictExitNodes 1 \
        --RunAsDaemon 1 \
        --CookieAuthentication 0 \
        --SocksPort "$_arg_socks" \
@@ -81,9 +83,9 @@ function CreateTorProcess() {
        --PidFile "${_proc_dir}/${_arg_socks}.pid" \
        --DataDirectory "${_proc_dir}" \
        --SocksBindAddress 127.0.0.1 \
-       --NewCircuitPeriod 15 \
-       --MaxCircuitDirtiness 15 \
-       --NumEntryGuards 8 \
+       --NewCircuitPeriod 10 \
+       --MaxCircuitDirtiness 10 \
+       --NumEntryGuards 1 \
        --CircuitBuildTimeout 5 \
        --ExitRelay 0 \
        --RefuseUnknownExits 0 \
