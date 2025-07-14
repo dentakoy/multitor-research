@@ -669,6 +669,9 @@ function _before_init() {
   else
 
     _multitor_directory_owner=$(stat -c %U "$_multitor_directory")
+    echo $_multitor_directory
+    echo $_multitor_directory_owner
+    echo $user_name
 
     if [[ "$init_state" -eq 1 ]] ; then
 
