@@ -3,5 +3,5 @@ log/*
 !/log/.gitkeep
 
 # Config files.
-etc/*
+#etc/*
 !/etc/.gitkeep
