@@ -10,8 +10,8 @@ useradd multitor -g multitor -s /bin/false -d $INSTALL_DIR
 
 chmod 700 $INSTALL_DIR
 chown -R multitor:multitor $INSTALL_DIR
-chmow +x $INSTALL_DIR/bin/multitor
-chmow +x $INSTALL_DIR/start.sh
+chmod +x $INSTALL_DIR/bin/multitor
+chmod +x $INSTALL_DIR/start.sh
 
 VAR_DIR=/var/lib/multitor
 mkdir $VAR_DIR
