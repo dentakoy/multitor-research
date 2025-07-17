@@ -6,7 +6,7 @@ mkdir $INSTALL_DIR
 cp -rf ./* $INSTALL_DIR
 
 groupadd multitor
-useradd multitor -g multitor -s /bin/bash -d $INSTALL_DIR
+useradd multitor -g multitor -s /bin/false -d $INSTALL_DIR
 
 chmod 700 $INSTALL_DIR
 chown -R multitor:multitor $INSTALL_DIR
