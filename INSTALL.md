@@ -1,7 +1,8 @@
 install and run:
 ```
-INSTALL_DIR=/opt/multitor
+git clone https://github.com/dentakoy/multitor-research.git
 
+INSTALL_DIR=/opt/multitor
 mkdir $INSTALL_DIR
 cp -rf ./* $INSTALL_DIR
 
